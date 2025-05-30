@@ -1,0 +1,12 @@
+.btn:hover {
+  background-color: #7093df;
+  box-shadow: 0 0 5px #080808, 0 0 5px #2d2e2e;
+  color: #fff;
+  transform: scale(1.0);
+  transition: all 0.3s ease;
+}
+.btn:active {
+  background-color: #0a58ca;
+  box-shadow: 0 0 5px #0a58ca, 0 0 10px #0a58ca;
+  transform: scale(1);
+}

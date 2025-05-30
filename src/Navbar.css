@@ -1,0 +1,60 @@
+.navbar {
+  background-color: rgba(255, 255, 255, 0.6) !important; /* Light transparent bg */
+  position: sticky;/* Fixed instead of absolute */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1030;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+    transition: all 0.3s ease-in-out;
+}
+
+.navbar .nav-link,
+.navbar .navbar-brand {
+  color: #0a0c16 !important;
+  font-weight: 600;
+}
+
+.navbar .nav-link:hover,
+.navbar .navbar-brand:hover {
+  color: #6e5510 !important;
+}
+
+.navbar .btn-outline-primary,
+.navbar .btn-outline-danger,
+.navbar .btn-outline-success {
+  border-color: white;
+  color: white;
+}
+
+.navbar .btn-outline-primary:hover,
+.navbar .btn-outline-danger:hover,
+.navbar .btn-outline-success:hover {
+  background-color: white;
+  color: black;
+}
+.dropdown-menu {
+  background-color: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(8px);
+}
+.dropdown-item {
+  color: #0a0c16 !important;
+}
+.dropdown-item:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #6e5510 !important;
+}
+.navbar-toggler {
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.navbar-toggler-icon {
+  /* Secure lock SVG icon as background */
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3e%3ccircle cx='16' cy='12' r='6' fill='rgba(255,255,255,0.8)' stroke='rgba(110,85,16,0.8)' stroke-width='2'/%3e%3cpath d='M6 26c0-4.418 4.477-8 10-8s10 3.582 10 8' fill='none' stroke='rgba(110,85,16,0.8)' stroke-width='2' stroke-linecap='round'/%3e%3c/svg%3e");
+}
+.custom-navbar.scrolled {
+  background-color: #000000;
+  box-shadow: 0 4px 10px rgba(204, 89, 89, 0.15);
+}

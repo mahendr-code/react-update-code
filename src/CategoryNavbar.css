@@ -1,0 +1,144 @@
+.category-navbar {
+  background-color: rgb(131, 176, 255);
+  position: fixed;
+  top: 70px;
+  width: 100%;
+  z-index: 1000;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+  padding: 0.5rem 1rem;
+
+  white-space: nowrap;
+}
+
+.category-inner {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 3rem;
+}
+
+.category-dropdown {
+  position: relative;
+}
+
+.category-link {
+  position: relative;
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  white-space: nowrap;
+  padding: 6px 10px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.category-link:hover {
+  color: #212121;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px) scale(1.05);
+}
+
+.category-link:active {
+  background: rgba(0, 201, 255, 0.18);
+  color: #000000;
+  transform: scale(0.98);
+}
+
+.category-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 100%;
+  background: linear-gradient(90deg, #00c9ff, #92fe9d);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease;
+}
+
+.category-link:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+/* --- Dropdown Menu (for non-All items) --- */
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #ffffff;
+  border-radius: 8px;
+  min-width: 180px;
+  box-shadow: 0 6px 16px rgba(219, 202, 202, 0.2);
+  z-index: 1001;
+  padding: 0.5rem 0;
+}
+
+.dropdown-content span {
+  display: block;
+  padding: 10px 16px;
+  color: #333;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dropdown-content span:hover {
+  background-color: #223135;
+  color: #d6d6d6;
+}
+
+/* Show dropdown on hover */
+.category-dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* --- Sidebar dropdown for "All" --- */
+.sidebar-dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+  padding: 0.5rem 0;
+  width: 220px;
+  max-height: 400px;
+  overflow-y: auto;
+  z-index: 1010;
+}
+
+.sidebar-dropdown::-webkit-scrollbar {
+  width: 6px;
+}
+
+.sidebar-dropdown::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 4px;
+}
+
+.sidebar-item {
+  padding: 10px 16px;
+  color: #222;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.sidebar-item:hover {
+  background-color: #00c9ff;
+  color: #000;
+}
+
+/* Show sidebar dropdown on hover */
+.category-dropdown.sidebar:hover .sidebar-dropdown {
+  display: block;
+}
