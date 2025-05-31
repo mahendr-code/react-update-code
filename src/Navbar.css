@@ -58,3 +58,51 @@
   background-color: #000000;
   box-shadow: 0 4px 10px rgba(204, 89, 89, 0.15);
 }
+/* Responsive Navbar Container */
+@media (max-width: 991.98px) {
+  .navbar {
+    padding: 0.5rem 1rem;
+  }
+
+  .navbar-collapse {
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(8px);
+    border-radius: 8px;
+    margin-top: 0.5rem;
+    padding: 1rem;
+  }
+
+  .navbar .nav-link {
+    display: block;
+    padding: 0.75rem 1rem;
+    color: #0a0c16 !important;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .navbar .nav-link:last-child {
+    border-bottom: none;
+  }
+
+  .navbar .btn-outline-primary,
+  .navbar .btn-outline-danger,
+  .navbar .btn-outline-success {
+    width: 100%;
+    margin-top: 0.5rem;
+  }
+}
+@media (max-width: 767.98px) {
+  .navbar-toggler {
+    border: none;
+    background-color: transparent;
+    padding: 0.25rem 0.5rem;
+    outline: none;
+  }
+
+  .navbar-toggler-icon {
+    width: 24px;
+    height: 24px;
+    background-size: cover;
+  }
+}
+
+

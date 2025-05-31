@@ -1,7 +1,15 @@
 import React, { useState,useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import "./Navbar.css";
-import { FaUserCircle } from 'react-icons/fa'; // 👈 FontAwesome user icon
+
+window.addEventListener('scroll', function () {
+  const navbar = document.querySelector('.custom-navbar');
+  if (window.scrollY > 50) {
+    navbar.classList.add('scrolled');
+  } else {
+    navbar.classList.remove('scrolled');
+  }
+});
 
 const Navbar = () => {
   const navigate = useNavigate();

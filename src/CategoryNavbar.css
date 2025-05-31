@@ -9,21 +9,35 @@
   transition: background-color 0.3s ease;
   padding: 0.5rem 1rem;
 
-  white-space: nowrap;
 }
 
+/* Horizontal scroll for category items */
 .category-inner {
   display: flex;
   flex-wrap: nowrap;
   gap: 3rem;
+  padding-bottom: 0.5rem;
+
+
+  scrollbar-width: thin;
+  scrollbar-color: #ccc transparent;
+}
+
+.category-inner::-webkit-scrollbar {
+  height: 6px;
+}
+
+.category-inner::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 3px;
 }
 
 .category-dropdown {
   position: relative;
+  flex: 0 0 auto;
 }
 
 .category-link {
-  position: relative;
   background: transparent;
   border: none;
   color: #ffffff;
@@ -66,22 +80,22 @@
   transform-origin: left;
 }
 
-/* --- Dropdown Menu (for non-All items) --- */
-
-.dropdown-content {
+/* Dropdowns */
+.dropdown-content,
+.sidebar-dropdown {
   display: none;
   position: absolute;
   top: 100%;
-  left: 0;
   background-color: #ffffff;
   border-radius: 8px;
-  min-width: 180px;
-  box-shadow: 0 6px 16px rgba(219, 202, 202, 0.2);
-  z-index: 1001;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
   padding: 0.5rem 0;
+  min-width: 180px;
+  z-index: 1010;
 }
 
-.dropdown-content span {
+.dropdown-content span,
+.sidebar-item {
   display: block;
   padding: 10px 16px;
   color: #333;
@@ -90,55 +104,67 @@
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.dropdown-content span:hover {
+.dropdown-content span:hover,
+.sidebar-item:hover {
   background-color: #223135;
   color: #d6d6d6;
 }
 
-/* Show dropdown on hover */
+/* Show dropdowns on hover */
 .category-dropdown:hover .dropdown-content {
   display: block;
 }
 
-/* --- Sidebar dropdown for "All" --- */
-.sidebar-dropdown {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background-color: #ffffff;
-  border-radius: 8px;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
-  padding: 0.5rem 0;
-  width: 220px;
-  max-height: 400px;
-  overflow-y: auto;
-  z-index: 1010;
-}
-
-.sidebar-dropdown::-webkit-scrollbar {
-  width: 6px;
-}
-
-.sidebar-dropdown::-webkit-scrollbar-thumb {
-  background: #ccc;
-  border-radius: 4px;
-}
-
-.sidebar-item {
-  padding: 10px 16px;
-  color: #222;
-  font-size: 14px;
-  cursor: pointer;
-  transition: background 0.2s ease;
-}
-
-.sidebar-item:hover {
-  background-color: #00c9ff;
-  color: #000;
-}
-
-/* Show sidebar dropdown on hover */
 .category-dropdown.sidebar:hover .sidebar-dropdown {
   display: block;
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 768px) {
+  .category-navbar {
+    padding: 0.5rem;
+    top: 60px;
+    margin-top: 20px;
+  }
+
+  .category-link {
+    font-size: 13px;
+    padding: 5px 8px;
+  }
+
+  .dropdown-content,
+  .sidebar-dropdown {
+    right: 0;
+    left: 5px;
+    min-width: 160px;
+    font-size: 13px;
+  }
+
+  .sidebar-item,
+  .dropdown-content span {
+    padding: 8px 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .category-navbar {
+    top: 55px;
+    padding: 0.3rem 0.5rem;
+  }
+
+  .category-link {
+    font-size: 12px;
+    padding: 4px 6px;
+  }
+
+  .dropdown-content,
+  .sidebar-dropdown {
+    min-width: 140px;
+  }
+
+  .sidebar-item,
+  .dropdown-content span {
+    font-size: 12px;
+    padding: 6px 10px;
+  }
 }

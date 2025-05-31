@@ -47,28 +47,29 @@ const Home = () => {
         <h2>Our  Tranding Products</h2>
         <div className="product-grid">
           <div className="product-card">
-            <img src="home p1.webp" alt="Product 1" />
-            <h3>ROASTER Stylish Multi Sports</h3>
+            <img src="public/home item1.jpeg" alt="Product 1" />
+            <h3>Necklace</h3>
             <p>Rs. 1,999</p>
             <Link to="/products" className="btn-secondary">View More</Link>
           </div>
             <div className="product-card">
-            <img src="home p1.webp" alt="Product 1" />
-            <h3>ROASTER Stylish Multi Sports</h3>
+            <img src="public/home item 2.webp" alt="Product 1" />
+            <h3>Rose Golden   Earring</h3>
             <p>Rs. 1,999</p>
             <Link to="/products" className="btn-secondary">View More</Link>
           </div>
             <div className="product-card">
-            <img src="home p1.webp" alt="Product 1" />
-            <h3>ROASTER Stylish Multi Sports</h3>
-            <p>Rs. 1,999</p>
+            <img src="public/home item 3.webp" alt="Product 1" />
+            <h3>Transparent Tape The high- grade </h3>
+            <p>Rs. 199</p>
             <Link to="/products" className="btn-secondary">View More</Link>
           </div>
       
           <div className="product-card">
-            <img src="home p2.png" alt="Product 2" />
-            <h3>Modern Watch</h3>
-            <p>Rs. 2,999</p>
+            <img src="public/home item 4.webp" alt="Product 2" />
+            <h3>Paper Cutter, Multicolor, Plastic Grip Handle, PAck of 4 assorted colors
+</h3>
+            <p>Rs. 299</p>
             <Link to="/products" className="btn-secondary">View More</Link>
           </div>
           <div className="product-card">

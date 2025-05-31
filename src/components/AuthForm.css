@@ -220,6 +220,56 @@ form {
   border: 2px solid #fff;
   box-shadow: none;
 }
+.auth-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background: #f0f2f5;
+  overflow: hidden;
+}
+
+/* Add to AuthForm.css */
+.spinner {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: conic-gradient(#7494ec 10%, #f3f3f3 40%, #eee 60%, #7494ec 100%);
+  position: relative;
+  animation: spin 1s cubic-bezier(0.68, -0.55, 0.27, 1.55) infinite;
+  display: inline-block;
+  margin-right: 8px;
+}
+.spinner::before {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 20px;
+  height: 20px;
+  background: #fff;
+  border-radius: 50%;
+  z-index: 1;
+}
+.spinner::after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 13px;
+  width: 4px;
+  height: 10px;
+  background: #7494ec;
+  border-radius: 2px;
+  box-shadow: 0 0 8px #7494ec88;
+  z-index: 2;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
 
 @media screen and (max-width: 650px) {
   .auth-container {
@@ -281,53 +331,4 @@ form {
   .toggle-panel h1 {
     font-size: 30px;
   }
-}
-.auth-page {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  width: 100vw;
-  background: #f0f2f5;
-  overflow: hidden;
-}
-
-/* Add to AuthForm.css */
-.spinner {
-  width: 28px;
-  height: 28px;
-  border-radius: 50%;
-  background: conic-gradient(#7494ec 10%, #f3f3f3 40%, #eee 60%, #7494ec 100%);
-  position: relative;
-  animation: spin 1s cubic-bezier(0.68, -0.55, 0.27, 1.55) infinite;
-  display: inline-block;
-  margin-right: 8px;
-}
-.spinner::before {
-  content: "";
-  position: absolute;
-  top: 4px;
-  left: 4px;
-  width: 20px;
-  height: 20px;
-  background: #fff;
-  border-radius: 50%;
-  z-index: 1;
-}
-.spinner::after {
-  content: "";
-  position: absolute;
-  top: 2px;
-  left: 13px;
-  width: 4px;
-  height: 10px;
-  background: #7494ec;
-  border-radius: 2px;
-  box-shadow: 0 0 8px #7494ec88;
-  z-index: 2;
-}
-
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
 }

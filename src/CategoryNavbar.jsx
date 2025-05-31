@@ -17,6 +17,16 @@ const categories = [
   { name: 'Books', items: ['Fiction', 'Non-Fiction', 'Children\'s Books'] },
   { name: 'Toys & Games', items: ['Action Figures', 'Board Games', 'Puzzles'] },
 ];
+// Optional: Smooth horizontal scroll with mouse wheel
+const container = document.querySelector(".category-inner");
+if (container) {
+  container.addEventListener("wheel", (evt) => {
+    if (evt.deltaY !== 0) {
+      evt.preventDefault();
+      container.scrollLeft += evt.deltaY;
+    }
+  });
+}
 
 const CategoryNavbar = () => {
   const navigate = useNavigate();

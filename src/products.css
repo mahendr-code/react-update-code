@@ -46,9 +46,45 @@
 .btn-primary:hover {
   background-color: #30639c;
 }
+@media (max-width: 1024px) {
+  .card {
+    max-width: 280px;
+  }
 
-@media (max-width: 768px) {
   .card-img-top {
     height: 160px;
+  }
+}
+
+@media (max-width: 768px) {
+  .main {
+    padding: 30px 10px;
+  }
+
+  .card {
+    max-width: 100%;
+  }
+
+  .card-img-top {
+    height: 160px;
+  }
+
+  .card-title {
+    font-size: 1.1rem;
+  }
+
+  .card-text {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .card-img-top {
+    height: 140px;
+  }
+
+  .btn-primary {
+    width: 100%;
+    margin-top: 10px;
   }
 }
